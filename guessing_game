@@ -1,0 +1,18 @@
+import random
+
+random_number = random.randint(1, 100)
+user = 0
+count = 0
+
+while user != random_number:
+    user = int(input('enter your guess: '))
+    count += 1
+
+    if user < random_number:
+        print('lower')
+    elif user > random_number:
+        print('upper')
+    elif user == random_number:
+        print('congrats you win!')
+        print('it took you',count,'tries')
+        break
